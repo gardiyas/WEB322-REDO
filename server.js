@@ -8,7 +8,8 @@
 * Student ID: 137524195
 * Course: WEB322NCC
 * Professor Name: Haytham Qushtom
-*
+* GITHUB: https://github.com/gardiyas/web322finalassessment
+* HEROKU: https://web322finalassessment.herokuapp.com/
 ************************************************************************************/
 var HTTP_PORT = process.env.PORT || 8080;
 
