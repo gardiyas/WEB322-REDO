@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    {{>bootstrap}}
+</head>
+<body>
+    {{>header}}
+    {{>nav}}
+
+    <div class="container-fluid">
+        
+        <h1 class="justify-content-center">Welcome Admin {{data.firstName}} {{data.lastName}} </h1>
+
+    </div>
+
+    <hr>
+
+    <a class ="btn btn-primary" role="button" href="/editplan">Click her to edit an existing plan!</a>
+    
+    <hr>
+
+    <a href="/logout">Logout</a>
+
+
+</body>
+</html>

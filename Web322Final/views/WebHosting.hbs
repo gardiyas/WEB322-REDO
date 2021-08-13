@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTA Web Hosting Plans</title>
+
+    {{>bootstrap}}
+    <style>
+        .hot {
+            text-shadow:
+                0 0 7px red,
+                0 0 151px red;
+        }
+
+      
+    </style>
+
+    <script>
+        function added() {
+            alert("Added plan to cart.");
+        }
+    </script>
+
+</head>
+<body style="background-image: url('background.jpeg'); height: 100vh; background-repeat: no-repeat; background-size: cover;">
+
+
+    {{>header}}
+
+    
+    {{>nav}}
+
+    <div class="container-fluid text-danger justify-content-center"> 
+        {{#if msg}}
+            <h3 class="justify-content-center">{{msg}}</h3>
+        {{/if}}
+    </div>
+
+    <div class="container-fluid">
+        <div class="position-absolute top-0 start-0 text-white">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <ul>
+                <li>
+                    <p class="fs-4" >TTA Web Hosting Domain</p>
+                </li>
+            </ul>           
+
+            <ul>
+                <li>
+                    <p class="fs-4" >Get started by looking through our plans below</p>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <p class="fs-4" >Scroll Down and see What's new</p>
+                </li>
+            </ul>                
+            
+            
+        </div>
+            <div class="porto">
+                <img class="" src="backgorund.jpg"> </img>
+            </div>
+            
+               
+    </div>
+    <style>
+        .porto{
+            max-width: 100%;
+            height: auto;
+            
+        }
+    </style>
+    
+    <div class="container-fluid bg-white">
+        {{#each plan}}
+        
+        <div class="row text-center ">
+            <div class="col border border-5 " >
+                <br>
+                <img class ='img-fluid' style='width: 150px;' src='./planPictures/planPic.jpg' alt='Webhost Logo'></img>
+
+                <h2>{{slot}}</h2>
+                <h3><b>{{name}}</b></h3>
+                {{#if hot}}<h4 class="hot">TTA Starter</h4>{{/if}}
+                <h4>{{desc}}</h4>
+                <h5><em>As low as</em></h5>
+                <h4><b>${{price}}</b></h4>
+
+                <form action="/addToCart" method="POST" enctype="application/x-www-form-urlencoded">
+                    <div class="col"><button onclick="added()" class="btn btn-warning" type="submit" id="submit" name="submit" value={{slot}}>Add to Cart</a></div>
+                </form>
+
+                <br>
+            </div>
+            
+        </div>
+        {{/each}}
+        
+    </div>
+
+    <center>
+        <a class ="btn btn-primary" role="button" href="/plans">Go to Plans</a>
+        <a class ="btn btn-primary" role="button" href="/usercart">View cart</a>
+        <a href="/logout">Logout</a> 
+    </center>
+
+    
+
+</body>
+</html>

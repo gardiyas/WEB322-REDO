@@ -1,0 +1,1604 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Rubik', sans-serif;
+  /* float: left; */
+  margin: 0 auto;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* SETTING IMG FOR SCALING -------------------------------------
+-------------------------------------------- */
+
+img {
+  width: 100%;
+}
+
+/* HEADER -------------------------------------
+-------------------------------------------- */
+
+.header {
+  display: inline-block;
+  width: 10%;
+  padding: 5px 0 5px;
+}
+
+.container {
+  margin: 0 40px;
+  margin-top: -150px;
+  /* float: left; */
+}
+
+.header .logo {
+  float: left;
+  width: auto;
+  margin-bottom: -50px;
+  margin-top: -90px;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 10%;
+  background: #f1f1f1;
+  margin-left: 1350px;
+  margin-top: -140px;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 5%;
+  padding: 10px;
+  margin-left: 1550px;
+  margin-top: -140px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.account {
+    margin-left: 450px;
+    margin-top: -240px;
+    margin-right: -50px;
+}
+
+.header .account {
+  float: right;
+}
+
+.container-header {
+  margin: 0 60px; 
+}
+/* DROPDOWN MENU -------------------------------------
+-------------------------------------------- */
+
+.dropbtn {
+  background-color: black;
+  color: white;
+  padding: 16px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-left: -4px;
+  transition-duration: 0.5s;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #d2ac47;
+  min-width: 100%;
+  max-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition-duration: 0.5s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #d2ac47;
+}
+
+#set-radius {
+  border-radius: 10px 0 0 10px;
+}
+
+#set-radius a {
+  text-decoration: none;
+  color: white;
+}
+
+#set-radius-2 {
+  border-radius: 0 10px 10px 0;
+}
+
+#set-radius-2 a {
+  text-decoration: none;
+  color: white;
+}
+
+#set-a a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu {
+  max-width: 100%;
+  text-align: center;  
+}
+
+/* SLIDER - IMAGE -------------------------------------
+------------------------------------------- */
+
+
+
+.slider {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.slider img {
+  max-width: 75%;
+}
+
+.slider .slider-text {
+  width: 450px;
+  color: white;
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left: 60px;
+  margin-left: -500px;
+}
+
+.slider .slider-text12 {  
+  max-width: 75%;
+  font-size: 60px;
+  width: 450px;
+  color: white;
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left: 60px;
+  margin-left: 1200px;  
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  color: #877666;
+  background-color: red;
+  border: 1px solid #e2c166;
+  border-radius: 8px;
+  width: 150px;
+  height: 45px;  
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: -100px;
+}
+
+.slider .myform {  
+  width: 500px;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 60px;
+  color: #d2ac47;;
+}
+
+form {
+  padding: 15px;
+  margin-top: 10%;
+  margin-left: 10%;
+  background:whitesmoke;
+  outline: none;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border-radius: 0.25em;
+}
+
+.myform h1 {
+  font-size: 24px;
+  color: #1C5D99;
+  line-height: 1.4;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.2em;
+  font-size: 1.3em;
+  border: 1px solid rgb(210, 172, 71);
+  border-radius: 0.25em;
+}
+
+input[type="submit"] {
+  width: 150px;
+  background-color: #d2ac47;
+  color: white;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #e2c166;
+}
+
+.label-checkout {
+  padding-left: 65px;
+}
+
+.slider .slider-text h1 {
+  font-size: 60px;
+  color: white;
+  line-height: 1.1;
+}
+
+.slider .slider-text p {
+  font-size: 22px;
+  color: white;
+  padding: 15px 0;
+}
+
+.slider .slider-text a {
+  display: inline-block;
+  width: 150px;
+  height: 45px;
+  margin-top: 15px;
+  text-align: center;
+  line-height: 45px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600px;
+  background-color: #d2ac47;
+  color: white;
+  border-radius: 8px;
+}
+
+.slider .slider-text a:hover {
+  background-color: #e2c166;
+}
+
+/* PRODUCTS SECTION -------------------------------------
+-------------------------------------------- */
+
+.products {
+  display: inline-block;
+  width: 100%;
+}
+
+.heading {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.heading h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.heading p {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #877666;
+}
+
+/* ITEMS -------------------------------------
+-------------------------------------------- */
+
+.product-item {
+  display: inline-block;
+  width: 100%;
+}
+
+.item {
+  width: 32%;
+  float: left;
+  margin: 0 0.5% 50px;
+}
+
+/* ITEM TITLE -------------------------------------
+-------------------------------------------- */
+
+.item-title {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.item-title h5 {
+  font-size: 18px;
+  color: #877666;
+  margin-bottom: 7px;
+}
+
+.location h5 {
+  font-size: 14px;
+  color: black;
+}
+
+/* ITEM PRICE -------------------------------------
+-------------------------------------------- */
+
+.item-title p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #d2ac47;
+}
+
+.item-title p del {
+  font-size: 16px;
+  color: #848586;
+  font-weight: 400;
+}
+
+/* VIEW ALL -------------------------------------
+-------------------------------------------- */
+
+.viewall-button {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.view-button{
+  width: 100%;
+}
+
+.viewall-button a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  color: #877666;
+  background-color: white;
+  border: 1px solid #e2c166;
+  border-radius: 8px;
+  width: 250px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+.viewall-button a:hover {
+  color: white;
+  background-color: #d2ac47;
+}
+
+
+/* NO RESULT TEXT -------------------------------------
+-------------------------------------------- */
+.no-result-text {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 450px;
+  margin-top: 100px;
+}
+
+
+/* FIRST BANNER -------------------------------------
+-------------------------------------------- */
+
+.banner {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  background-image: url(images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 25px 0;
+  margin-top: 50px;
+}
+
+.banner a:hover {
+  background-color: #e7ca7b;
+}
+/* .banner h3 {
+  font-family: 'Walter Turncoat', cursive;
+} */
+
+.banner h3 {
+  font-size: 50px;
+  color: #1D3557;
+  margin: 25px 0;  
+}
+
+.banner a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background-color: #e2c166;
+  border: 1px solid #e2c166;
+  border-radius: 8px;
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* IMAGES ZOOM ANIMATION -------------------------------------
+-------------------------------------------- */
+
+.img-hover-zoom {
+  overflow: hidden;
+}
+
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.2);
+}
+
+/* SETTING ITEM IMAGES AND LINK -------------------------------------
+-------------------------------------------- */
+
+.item-image {
+  position: relative;
+}
+
+.item-image img {
+  max-width: 100%;
+}
+
+.item-image .item-button a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #d2ac47;
+  border-radius: 30px;
+  width: 100px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin: 5px;
+  font-weight: 600;
+}
+
+.item-image .item-button {
+  position: absolute;
+  text-align: center;
+  bottom: 10%;
+  opacity: 0;
+}
+
+.item-image:hover .item-button {
+  width: 100%;
+  opacity: 1;
+}
+
+.item-image .item-button a:hover {
+  background-color: #ecc968;
+}
+
+/* FOOTER -------------------------------------
+-------------------------------------------- */
+
+.footer {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background-image: url(images/footer.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 45px 0;
+  margin-top: 35px;
+}
+
+.footer-register {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background-image: url(images/footer.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 45px 0;
+}
+
+/* .footer h3 {
+  font-family: 'Walter Turncoat', cursive;
+} */
+
+.footer-text {
+  padding: 5px 0;
+}
+
+.footer-text h3 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.footer-text p {
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+}
+
+.footer-banner {
+  margin: 0 60px;
+}
+
+/* FOOTER LINKS ------------------------------------
+-------------------------------------------- */
+
+.footer-titles {
+  padding: 15px 0;
+}
+
+.footer-titles ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.footer-titles ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #d2ac47;
+}
+
+.inc-rights {
+  color: white;
+  margin: 20px 0 0;
+  font-size: 15px;
+}
+
+/* TOOLTIP - LOGIN  ----------------------------
+-------------------------------------------- */
+
+.account .tooltiptext {
+  visibility: hidden;
+  width: 50px;
+  background-color: rgba(0, 0, 0, 0.589);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.account:hover .tooltiptext {
+  visibility: visible;
+}
+
+.submit:hover {
+  background-color: #dfbf68;
+}
+
+
+/* HEADER USER INFO - WHO LOGGED IN? */
+
+.header-user-info {
+  /* text-align: center; */
+  margin: 0;
+}
+
+.header-user-info ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.header-user-info li {
+  float: left;
+}
+
+.header-user-info li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.header-user-info li p {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.header-user-info li a:hover {
+  background-color: #111;
+}
+
+/* PROMOTION VIDEO */
+
+.promotion-video {
+  display: inline-block;
+  width: 100%;
+}
+
+.promotion-video-only {
+  width: 50%;
+    margin: auto;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Rubik', sans-serif;
+  float: left;
+  margin: 0 auto;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* SETTING IMG FOR SCALING -------------------------------------
+-------------------------------------------- */
+
+img {
+  width: 100%;
+}
+
+/* HEADER -------------------------------------
+-------------------------------------------- */
+
+.header {
+  display: inline-block;
+  width: 100%;
+  padding: 25px 0 15px;
+  margin-top: -15px;
+  margin-bottom: -10px;
+}
+
+.container{
+  margin: 0 210px;
+  float: left;  
+}
+
+.header .logo {
+  float: left;
+  width: auto;
+}
+
+.account {
+  padding-left: -10px;
+  padding-right: 50px;
+}
+
+.header .account {
+  float: right;
+}
+
+.container-header {
+  margin: 100 10px;
+}
+/* DROPDOWN MENU -------------------------------------
+-------------------------------------------- */
+
+.dropbtn {
+  background-color: black;
+  color: white;
+  padding: 16px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-left: -110px;
+  margin-right: 100px;
+  transition-duration: 0.5s;
+}
+
+.button {
+  background-color:rgb(4, 117, 223);
+  color: white;
+  padding: 14px 55px;
+  margin: 8px 55;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 5;
+}
+
+.diffor{
+  padding: 60px 0;
+  text-align: center;
+  color: rgb(255, 0, 0);
+  margin-top: -130px;
+}
+
+.piffor{
+  padding: 60px 0;
+  text-align: center;
+  color: rgb(0, 109, 91);
+  margin-top: -130px;
+  margin-left: 170px;
+  font-size: 20px;
+  width: 400px;
+  font-weight: bold;  
+}
+
+.tikkor{
+  padding: 60px 0;
+  text-align: center;
+  color: rgb(0, 109, 91);
+  margin-top: -210px;
+  margin-left: 530px;
+  font-size: 20px;
+  width: 400px;
+  font-weight: bold;  
+}
+
+.zabra{
+  padding: 60px 0;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-top: -100px;
+  margin-left: 0px;
+  font-size: 20px;
+  width: 500px;
+}
+
+.katro{
+  padding: 60px 0;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-top: -100px;
+  margin-left: 500px;
+  font-size: 20px;
+  width: 500px;
+}
+
+.metro{
+  padding: 60px 0;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-top: -100px;
+  margin-left: 930px;
+  font-size: 20px;
+  width: 500px;
+}
+
+
+.partoor{
+  padding: 60px 0;
+  text-align: center;
+  color: rgb(0, 109, 91);
+  margin-top: -200px;
+  margin-left: 800px;
+  font-size: 20px;
+  width: 500px;
+  font-weight: bold; 
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;  
+}
+
+.dropss{
+  position: relative;
+  display: inline-block;
+  margin-top: -500px;
+  margin-left: 90px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #d2ac47;
+  min-width: 100%;
+  max-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition-duration: 0.5s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #d2ac47;
+}
+
+#set-radius {
+  border-radius: 10px 0 0 10px;
+}
+
+#set-radius a {
+  text-decoration: none;
+  color: white;
+}
+
+#set-radius-2 {
+  border-radius: 0 10px 10px 0;
+}
+
+#set-radius-2 a {
+  text-decoration: none;
+  color: white;
+}
+
+#set-a a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu {
+  max-width: 100%;
+  text-align: center;
+}
+
+/* SLIDER - IMAGE -------------------------------------
+-------------------------------------------- */
+
+.slider {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin-top: -160px;
+}
+
+.slider img {
+  max-width: 100%;
+}
+
+.slider .slider-text {
+  width: 750px;
+  color: white;
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left: 560px;
+}
+
+form {
+  padding: 25px;
+  margin: 70px;
+  background:whitesmoke;
+  outline: none;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border-radius: 0.25em;
+}
+
+.myform h1 {
+  font-size: 24px;
+  color: #1C5D99;
+  line-height: 1.4;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.2em;
+  font-size: 1.3em;
+  border: 1px solid rgb(210, 172, 71);
+  border-radius: 0.25em;
+}
+
+input[type="submit"] {
+  width: 150px;
+  background-color: #d2ac47;
+  color: white;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #e2c166;
+}
+
+.label-checkout {
+  padding-left: 65px;
+}
+
+.slider .slider-text h1 {
+  font-size: 85px;
+  color: white;
+  line-height: 1.1;
+  margin-top: -10px;
+}
+
+.slider .slider-text p {
+  font-size: 40px;
+  color: white;
+  padding: 25px 0;
+  margin-left: -20px;  
+  margin-right: -50px;
+}
+
+.slider .slider-text a {
+  display: inline-block;
+  width: 400px;
+  height: 45px;
+  margin-top: 15px;
+  margin-left: 150px;
+  text-align: center;
+  line-height: 45px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #d2ac47;
+  color: white;
+  border-radius: 8px;
+}
+
+.slider .slider-text a:hover {
+  background-color: #e2c166;
+}
+
+/* PRODUCTS SECTION -------------------------------------
+-------------------------------------------- */
+
+.products {
+  display: inline-block;
+  width: 100%;
+}
+
+.looter{
+  display: inline-block;
+  width: 20%;
+  margin-left: 70px;
+  margin-top: -80px;
+}
+
+.heading {
+  padding: 60px 0;
+  text-align: center;
+  color: red;
+}
+
+.heading h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.heading p {
+  font-size: 16px;
+  color: #877666;
+  margin-top: -50px;
+}
+
+
+/* ITEMS -------------------------------------
+-------------------------------------------- */
+
+.product-item {
+  display: inline-block;
+  width: 100%;
+}
+
+.item {
+  width: 32%;
+  float: left;
+  margin: 0 0.5% 50px;
+}
+
+/* ITEM TITLE -------------------------------------
+-------------------------------------------- */
+
+.item-title {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.item-title h5 {
+  font-size: 18px;
+  color: #877666;
+  margin-bottom: 7px;
+}
+
+.location h5 {
+  font-size: 14px;
+  color: black;
+}
+
+/* ITEM PRICE -------------------------------------
+-------------------------------------------- */
+
+.item-title p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #d2ac47;
+}
+
+.item-title p del {
+  font-size: 16px;
+  color: #848586;
+  font-weight: 400;
+}
+
+/* VIEW ALL -------------------------------------
+-------------------------------------------- */
+
+.viewall-button {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.viewall-button a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  color: #877666;
+  background-color: white;
+  border: 1px solid #e2c166;
+  border-radius: 8px;
+  width: 250px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.viewall-button a:hover {
+  color: white;
+  background-color: #d2ac47;
+}
+
+/* FIRST BANNER -------------------------------------
+-------------------------------------------- */
+
+.banner {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  background-image: url(images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 55px 0;
+  margin-top: 50px;
+}
+
+.banner a:hover {
+  background-color: #e7ca7b;
+}
+.banner h3 {
+  font-family: 'Walter Turncoat', cursive;
+  margin-top: 140px;
+}
+
+.banner h3 {
+  font-size: 50px;
+  color: #1D3557;
+  margin: 225px 0;
+}
+
+.banner a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+  background-color: #00a2ff;
+  border: 1px solid #e2c166;
+  border-radius: 58px;
+  width: 180px;
+  height: 55px;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 115px;
+  margin-top: 115px;
+}
+
+/* IMAGES ZOOM ANIMATION -------------------------------------
+-------------------------------------------- */
+
+.img-hover-zoom {
+  overflow: hidden;
+}
+
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.2);
+}
+
+/* SETTING ITEM IMAGES AND LINK -------------------------------------
+-------------------------------------------- */
+
+.item-image {
+  position: relative;
+}
+
+.item-image img {
+  max-width: 100%;
+}
+
+.item-image .item-button a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #d2ac47;
+  border-radius: 30px;
+  width: 100px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin: 5px;
+  font-weight: 600;
+}
+
+.item-image .item-button {
+  position: absolute;
+  text-align: center;
+  bottom: 10%;
+  opacity: 0;
+}
+
+.item-image:hover .item-button {
+  width: 100%;
+  opacity: 1;
+}
+
+.item-image .item-button a:hover {
+  background-color: #ecc968;
+}
+
+/* FOOTER -------------------------------------
+-------------------------------------------- */
+
+.footer {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background-image: url(images/footer.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 45px 0;
+  margin-top: 35px;
+}
+
+.footer-register {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background-image: url(images/footer.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 45px 0;
+}
+
+.footer h3 {
+  font-family: 'Walter Turncoat', cursive;
+}
+
+.footer-text {
+  padding: 5px 0;
+}
+
+.footer-text h3 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.footer-text p {
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+}
+
+.footer-banner {
+  margin: 0 60px;
+}
+
+/* FOOTER LINKS ------------------------------------
+-------------------------------------------- */
+
+.footer-titles {
+  padding: 15px 0;
+}
+
+.footer-titles ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.footer-titles ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #d2ac47;
+}
+
+.inc-rights {
+  color: white;
+  margin: 20px 0 0;
+  font-size: 15px;
+}
+
+/* TOOLTIP - LOGIN  ----------------------------
+-------------------------------------------- */
+
+.account .tooltiptext {
+  visibility: hidden;
+  width: 50px;
+  background-color: rgba(0, 0, 0, 0.589);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.account:hover .tooltiptext {
+  visibility: visible;
+}
+
+.submit:hover {
+  background-color: #dfbf68;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three columns of equal width */
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+/* Style the list */
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* Add shadows on hover */
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+/* Pricing header */
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+/* List items */
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Grey list item */
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+/* The "Sign Up" button */
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Change the width of the three columns to 100%
+(to stack horizontally on small screens) */
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}

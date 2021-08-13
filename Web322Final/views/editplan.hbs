@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Plan</title>
+
+    {{>bootstrap}}
+</head>
+<body>
+    {{>header}}
+    {{>nav}}
+    <div class="container-fluid" style="background-image: url('background.jpeg'); height: 100vh; background-repeat: no-repeat; background-size: cover;">
+        <h1 class="justify-content-center">Edit a plan</h1>
+
+        <div class="container-fluid  justify-content-center"> 
+            <div class="text-danger">
+                {{#if err}}
+                <h3 class="justify-content-center">{{err}}</h3>
+                {{/if}}
+            </div>
+            <div class="text-success">
+                {{#if msg}}
+                <h3 class="justify-content-center">{{msg}}</h3>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="container-fluid justify-content-center col w-100">
+                <form action="/newplan" method="POST" enctype="multipart/form-data">
+                    <div class="form-group w-50">
+                        <label for="planName">Plan name (max 20 character)</label>
+                        <input type="text" class="form-control" name="planName" id="planName" placeholder="name" >
+                    </div>
+                    <div class="form-group w-50">
+                        <label for="planPrice">Price</label>
+                        <input type="text" class="form-control" name="planPrice" id="planPrice" placeholder="price" >
+                    </div>
+                    <div class="form-group w-50">
+                        <label for="planDesc">Description (max 50 characters)</label>
+                        <textarea row="2" class="form-control" name="planDesc" id="planDesc" placeholder="Enter info" ></textarea>
+                    </div>
+                    <div class="form-group w-50">
+                        <label for="picture">Upload a picture</label>
+                        <input type="file" class="form-control-file" id="picture" name="picture">
+                    </div>
+                    <div class="form-group w-50">
+                        <label for="position">Which position </label>
+                        <select id="position" name="position">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="hot">Hot?</label>
+                        <select id="hot" name="hot">
+                            <option value=true>Yes</option>
+                            <option value=false>No</option>
+                        </select>
+                    </div>
+
+
+                    <button class ="btn btn-dark" type="submit">Submit</button>
+                </form>
+                
+                <br>
+                <br>
+            </div> 
+
+        
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+  

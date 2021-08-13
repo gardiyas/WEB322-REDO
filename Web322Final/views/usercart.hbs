@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    {{>bootstrap}}
+
+</head>
+<body onload="calc()" >
+    {{>header}}
+    {{>nav}}
+
+    <h1 class="text-center">TTA Cart</h1>
+
+
+
+    <div class="container-fluid bg-white">
+
+        {{#if cart}}
+        
+        <div class="text-center w-75 container-fluid shadow p-3 mb-5 bg-body rounded">
+            <div class="col" >
+                <br>
+
+                <img class ='img-fluid' style='width: 150px;' src='./planPictures/planPic.jpg' alt='Webhost Logo'></img>
+                <h2>{{plan.slot}}</h2>
+                <h3><b>{{plan.name}}</b></h3>
+                <h4>{{plan.desc}}</h4>
+                <h4><b>${{plan.price}}/month</b></h4>
+
+                <br>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="container-fluid text-center d-flex justify-content-center border shadow p-3 mb-5 bg-body rounded w-75">
+
+                <div class=" row ">
+                    <button class="btn btn-primary" onclick="getTotal(1)">
+                        
+                            <h5>1 month</h5>
+                            $<h4 id="1">{{plan.price}}</h4>
+                            <h5>/month</h5>
+                            <h6 class="bg-warning d-inline">NO DISCOUNT</h6>
+                        
+                    </button>
+
+                    <button class="btn btn-primary" onclick="getTotal(12)">
+                        
+                            <h5>12 months</h5>
+                            $<h4 id="12"> </h4>
+                            <h5>/month</h5>
+                            <h6 class="bg-warning d-inline">SAVE 37%</h6>
+                    
+                    </button>
+
+                    <button class="btn btn-primary" onclick="getTotal(24)">
+                        
+                            <h5>24 months</h5>
+                            $<h4 id="24"> </h4>
+                            <h5>/month</h5>
+                            <h6 class= "bg-warning d-inline">SAVE 40%</h6>
+                        
+                    </button>
+
+                    <button class="btn btn-primary" onclick="getTotal(36)">
+                        
+                            <h5>36 months</h5>
+                            $<h4 id="36"> </h4>
+                            <h5>/month</h5>
+                            <h6 class="bg-warning d-inline">SAVE 43%</h6>
+                        
+                    </button>
+                </div>
+
+            
+            <br><br>
+
+        </div>
+
+        <h2 class="text-center">Order Summary</h2>
+        <div class="container-fluid border shadow p-3 mb-5 bg-body rounded d-flex text-center w-75">
+                
+            <h3>Total: </h3>
+
+
+            <h3 id="total"> </h3>
+
+           
+
+
+        </div>
+
+        <center>
+            <form action="/order" method="POST" enctype="application/x-www-form-urlencoded">
+                <button class="btn btn-primary" onclick=alert("Success")>Checkout</button>
+            </form>
+        </center>
+
+
+    </div>
+
+    <br>
+
+            
+    {{else}}
+
+
+    <div class="container-fluid text-center">
+        <h2>There doesn't seem to be anything here.</h2>
+    </div>
+
+
+    {{/if}}        
+
+
+    
+
+
+<script>
+    function calc(){
+        let price = {{plan.price}};
+        document.getElementById("12").innerHTML += (price*0.63).toFixed(2);
+        document.getElementById("24").innerHTML += (price*0.60).toFixed(2);
+        document.getElementById("36").innerHTML += (price*0.57).toFixed(2);
+    }
+
+
+    function ajaxFetch(url, data) {
+        console.log("data " + data.cost);
+        fetch(url, {
+            method: "post",
+            body: JSON.stringify(data),
+            headers: {"content-type" : "application/json"}
+        }).then(res=> { return res.json(); }).then(json => {
+            console.log(json.result);
+            document.getElementById("total").innerHTML = json.result;
+        }).catch((err) => {
+            console.log("Error: " + err);
+        })
+
+    }
+
+    function getTotal(months) {
+        var monthly = {cost:document.getElementById(months).innerHTML, months:months};
+        console.log("Monthly: " + monthly.cost + " months: " + monthly.months);
+        console.log(JSON.stringify(monthly));
+        ajaxFetch("/calculate", monthly);
+    }
+
+
+</script>             
+        <center>
+            <a class ="btn btn-primary" role="button" href="/plans">Go to Plans</a>
+            <a class ="btn btn-primary" role="button" href="/usercart">View cart</a>
+           <a href="/logout">Logout</a> 
+        </center>        
+
+    
+    
+</body>
+
+
+</html>

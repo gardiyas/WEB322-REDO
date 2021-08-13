@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+     <link rel="stylesheet" href="../public/register.css" />    
+
+    {{>bootstrap}}
+
+    <style>
+        body {
+            margin: 0 auto;
+            width: 50%;
+            background-image: url("backgorund.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0 0 5px 0 black;
+                
+        }
+        .page {
+            background-color: white;
+        }
+        h1 {
+            text-align: center;
+        }
+        .logo {
+            width: 150px;
+            display:inline-block;
+            padding: 20px;
+        }
+        input {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            padding: 3px;
+        }
+        .Login {
+            display: block;
+            text-align: center;
+            margin: auto;
+            width: 80%;
+            background-color:dodgerblue;
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 100px;
+            padding: 5px;
+        }
+        #Remember {
+            display: block;
+            margin-top: 5px;
+        }
+        .remember {
+            text-align: center;
+        }
+        .sign-up *{
+            padding: 10px;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="page container-fluid">
+
+        <h1><img class="img-fluid" style="width: 10vw;" src="img.jpg" alt="Webhost Logo"></img><br>Login</h1>
+
+        <div class="container-fluid text-danger justify-content-center"> 
+            {{#if msg}}
+            <h3 class="justify-content-center">{{msg}}</h3>
+            {{/if}}
+        </div>
+
+        <div class="container-fluid justify-content-center col w-100">
+            <form action="/logged" method="POST" enctype="application/x-www-form-urlencoded">
+                <div class="form-group w-100">
+                    <label for="email">Email </label>
+
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email" {{#if previousData.email}}value={{previousData.email}}{{/if}} >
+
+                </div>
+
+                <div class="form-group w-100">
+
+                    <label for="password">Password</label>
+
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Password" >
+
+                </div>
+
+
+                    <button class ="w-100 Login btn" type="submit">Login</button>
+            </form>
+            <img class="img-fluid" style="width: 900px;" src="logo-full2.png" alt="Web-Hosting-Servers"> </img>
+            
+        </div> 
+
+        <hr>
+        
+        <div class="container sign-up">
+            <h3>New to TTA?</h3>
+            <a href="/registration">Sign up</a>
+        </div>  
+
+        <div class="container sign-up">            
+            <a href="/">Back to Main</a>
+        </div>     
+
+      <div class="footer-titles">
+        <ul>
+          <li><a href="#">Get Help</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Social Media</a></li>
+        </ul>
+      </div>
+      <p class="inc-rights">Copyright © Summer 2021, Emre Isik, WEB322NCC</p>
+    </div>
+
+     
+  </div>
+</body>
+
+</html>

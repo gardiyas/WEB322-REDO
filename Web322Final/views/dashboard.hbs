@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    {{>bootstrap}}
+</head>
+<style>
+    .taQQ{
+        margin-left 50px;
+    }
+
+    body {
+            margin: 0 auto;
+            width: 100%;            
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0 0 5px 0 black;
+            position: relative;
+           text-align: center;
+          
+                
+        }
+</style>
+<body>
+    {{>header}}
+    {{>nav}}
+    
+    <h1 class="">Welcome TTA USER {{data.firstName}} {{data.lastName}} </h1>
+    <div class="body">
+        <img class="body" src="backgorund.jpg" alt="Webhost Logo"></img>        
+
+        <a class ="btn btn-primary" role="button" href="/plans">Go to Plans</a>
+
+        <a class ="btn btn-primary" role="button" href="/usercart">View cart</a>
+
+
+
+    <a href="/logout">Logout</a> 
+
+    
+    </div>
+
+
+      
+
+
+</body>
+</html>

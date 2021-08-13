@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    {{>bootstrap}}
+
+    <style>
+        body {
+            margin: 0 auto;
+            width: 50%;
+            background-image: url("backgorund.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0 0 5px 0 black;
+                        
+        }
+        .page {
+            background-color: white;    
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        h1, h3 {
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            color: Blue;
+        }
+        .logo {
+            width: 120px;
+            display:inline-block;
+            padding: 20px;
+        }
+        .Personal input {
+            width: 45%;
+            margin: 1em;
+            padding: 3px;
+        }
+        .Billing input{
+            width: 90%;
+            margin: 1em;
+            padding: 3px;
+        }
+        .Security input{
+            width: 45%;
+            margin: 1em;
+            padding: 3px;
+        }
+        .TermsofService h2{
+            background-color:YELLOW;
+            color:darkred;
+            padding: 5px 0;
+        }
+        .Register {
+            display: block;
+            text-align: center;
+            margin: auto;
+            width: 80%;
+            background-color:dodgerblue;
+            color: white;
+            margin-top: 10px;
+            
+            padding: 5px;
+        }
+        .error {
+            animation: flash 3s linear;
+        }
+        @keyframes flash {
+            0% {opacity: 1;}
+            25% {opacity: 0;}
+            50% {opacity: 1;}
+            75% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <div class = "page container">
+        
+        <header>
+            <h1><img class = "logo" src="img.jpg" alt="Webhost Logo"></img><br>Create an TTA Account</h1>
+        </header>
+
+        <div class="text-danger error"> 
+            {{#if msg}}
+            <h3>{{msg}}</h3>
+            {{/if}}
+        </div>
+
+        <form action="/register" method="POST">
+        <h2>Personal Information</h2>
+            <div class = "Personal row justify-content-center">
+                <input type="text" name="fName" id="fName" placeholder="First Name" {{#if previousData.fName}}value={{previousData.fName}}{{/if}}>  </input>
+                <input type="text" name="lName" id="lName" placeholder="Last Name" {{#if previousData.lName}}value={{previousData.lName}}{{/if}}></input>
+                <br>
+                <input type="text" name="email" id="email" placeholder="Email Address" {{#if previousData.email}}value={{previousData.email}}{{/if}}></input>
+                <input type="text" name="phNumber" id="phNumber" placeholder= "Phone Number" {{#if previousData.phNum}}value={{previousData.phNum}}{{/if}}></input>
+            </div>
+
+            <h2>Account Security</h2>
+            <div class="Security row justify-content-center">
+                <input type="password" name="password" id="password" placeholder= "Password"> </input>
+                <input type="password" name="password2" id="password2" placeholder= "Verify password"> </input>
+            </div>
+
+            <div class = "TermsofService">
+                <h2>Terms of Service</h2>
+                <input type="checkbox" id="terms" name="terms" value="agree">
+                <label for="terms">By submitting this order, you agree with TTA'S Terms and Conditions and Privacy Policy.  </label>
+                <br>
+            </div>
+
+            <br><br>
+            <button class ="Register" name="register" type="submit">Register</button>         
+
+        </form>        
+
+        <div class="container justify-content-center">
+            <a class="container justify-content-center " href="/login"> Login</a>
+            <h4>Already Created TTA Account?</h4>            
+        </div>
+
+        <div class="container sign-up">            
+            <a href="/">Back to Main</a>
+        </div>
+
+        <div class="footer-titles">
+        <ul>
+          <li><a href="#">Get Help</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Social Media</a></li>
+        </ul>
+      </div>
+      <p class="inc-rights">Copyright © Summer 2021, Emre Isik, WEB322NCC</p>
+    </div>
+  </div>
+
+        
+    </div>
+    
+</body>
+
+</html>
